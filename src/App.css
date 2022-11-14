@@ -1,0 +1,233 @@
+.App {
+  /* iPhone 13 / 13 Pro - 1 */
+position: relative;
+overflow-y: scroll;
+
+background: #FFFFFF;
+}
+.mainContainer{
+  height: auto;
+  width: auto;
+}
+.img{
+  margin-bottom: 5px;
+  width: auto;
+  height: 89px;
+}
+.profile h1{
+  font-size: 40px;
+}
+
+.video{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.profile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.profile>h1{
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
+.profile>h4{
+  margin-top: 0px;
+}
+.profile_img{
+  width: 192px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.contactsButton{
+  display: block;
+  width: 200px;
+  height: auto;
+  background: #E60024;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 10%;
+  width: 80%;
+}
+.infoItem{
+  display: inline-flex;
+  align-items: center;
+  height: 51px;
+  text-decoration-line: none;
+  color: #323232;
+}
+.infoItem>p{
+  margin-bottom: 0px;
+}
+.infoItem>img{
+  height: 39px;
+  margin-right: 10px;
+}
+
+.schedule{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.schedule>hr{
+  border: 1.5px solid rgb(0, 0, 0);
+  margin-top: 0px; 
+  margin-bottom: 40px;
+}
+.contact{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contactMapInfo{
+  background-color: #D9D9D9D9;
+  color: 818181;
+  width: 100vw;
+  height: 5vh;
+  font-size: 15px;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+}
+.contact>p{
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.contact>hr{
+  border: 1.5px solid rgb(0, 0, 0);
+  margin-top: 0px; 
+  margin-bottom: 40px;
+}
+iframe{
+  width:100vw;
+  height: 35vh;
+
+  border:0;
+
+}
+
+.social{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.social1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social>h2{
+  align-self: center;
+}
+.social>hr{
+  border: 1.5px solid rgb(0, 0, 0);
+  margin-top: 0px; 
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer>a>img{
+  height: 100px;
+  margin-top: 50px;
+}
+.footer>p{
+  font-size: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #8A8A8A;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 0px;
+}
+.scheduleButton{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  width: 100vw;
+  background-color: #5691ff;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  
+}
+.scheduleButton:active{
+  box-shadow: inset -.3rem -.1rem 1.4rem  #FBFBFB, inset .3rem .4rem .8rem #BEC5D0; 
+    cursor: pointer;
+}
+.profile>hr{
+  background-color: red;
+  width: 75vw;
+  border: 0;
+  height: 4px;
+
+}
+.donate{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.donate button{
+  margin-bottom: 10px;
+  text-decoration-line: none;
+  font-size: 20px;
+  
+}
+.button-left{
+  background: #ffffff;
+  color: #3549ff;
+}
+.button-right{
+  color: #686868;
+}
+
+.donate h4{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.notion{
+  color: #f61c3d;
+}
+.contact a{
+  text-decoration-line: none;
+  color: #323232;
+}
+.copybutton1{
+  float: left;
+}

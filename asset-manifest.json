@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/NVR_joohoyoung/static/css/main.d21972fd.css",
-    "main.js": "/NVR_joohoyoung/static/js/main.44fa675c.js",
+    "main.css": "/NVR_joohoyoung/static/css/main.3f488c59.css",
+    "main.js": "/NVR_joohoyoung/static/js/main.03b6ef8e.js",
     "static/js/787.23170c61.chunk.js": "/NVR_joohoyoung/static/js/787.23170c61.chunk.js",
     "index.html": "/NVR_joohoyoung/index.html",
-    "main.d21972fd.css.map": "/NVR_joohoyoung/static/css/main.d21972fd.css.map",
-    "main.44fa675c.js.map": "/NVR_joohoyoung/static/js/main.44fa675c.js.map",
+    "main.3f488c59.css.map": "/NVR_joohoyoung/static/css/main.3f488c59.css.map",
+    "main.03b6ef8e.js.map": "/NVR_joohoyoung/static/js/main.03b6ef8e.js.map",
     "787.23170c61.chunk.js.map": "/NVR_joohoyoung/static/js/787.23170c61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d21972fd.css",
-    "static/js/main.44fa675c.js"
+    "static/css/main.3f488c59.css",
+    "static/js/main.03b6ef8e.js"
   ]
 }

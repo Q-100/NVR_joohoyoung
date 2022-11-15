@@ -4,6 +4,7 @@ position: relative;
 overflow-y: scroll;
 
 background: #FFFFFF;
+box-sizing: border-box;
 }
 .mainContainer{
   height: auto;
@@ -209,12 +210,26 @@ iframe{
   font-size: 20px;
   
 }
+.donate a{
+  color: #000000;
+  text-decoration: none;
+}
 .button-left{
   background: #ffffff;
-  color: #3549ff;
+  color: #000000;
+  border: 0;
+  margin-right: 0px;
+}
+.button-left:active{
+  color: #5691ff;
 }
 .button-right{
   color: #686868;
+  font-size: 20px;
+  margin-left: 0px;
+}
+.button-right:active{
+  color: #5691ff;
 }
 
 .donate h4{

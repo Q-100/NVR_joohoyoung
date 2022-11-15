@@ -1,15 +1,18 @@
 import "./App.css";
 import infoData from "./data.js";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Calendar from "react-calendar";
-import "./Calendar.css"; // css import
+import "./Calendar.css";
 import moment from "moment";
 import Modal from "./Modal.js";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
 function App() {
   const [info, infoChange] = useState(infoData);
   const [value, onChange] = useState(new Date());
-  let [alert, alertSet] = useState(false);
+  let [alert, alertSet] = useState(true);
   useEffect(() => {
     let timer = setTimeout(() => {
       alertSet(false);
@@ -25,6 +28,18 @@ function App() {
     console.log("닫힘");
     setModalOpen(false);
   };
+  const exportTxt = useCallback(() => {
+    let fileName = "파일이름.txt";
+    let output = "string 타입의 데이터";
+    const element = document.createElement("a");
+    const file = new Blob([output], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = fileName;
+    document.body.appendChild(element); // FireFox
+    element.click();
+  }, []);
   return (
     <div className="App">
       {alert === true ? (
@@ -56,7 +71,7 @@ function App() {
 function Video() {
   return (
     <video muted autoPlay playsInline className="video">
-      <source src="NVR_Logo.mp4" type="video/mp4" />
+      <source src="PPP_LogoMotion.mp4" type="video/mp4" />
     </video>
   );
 }
@@ -74,7 +89,7 @@ function Profile() {
       <hr />
       <a
         className="contactsButton"
-        href="blob:https://nvrkr.com/c4ad5432-9ab5-4ace-8af5-c4219a1c9fba"
+        href="https://firebasestorage.googleapis.com/v0/b/nvr-production.appspot.com/o/videos%2Ftmp%2Fcontact.vcf?alt=media&token=c6fe9ede-2ff6-4b3c-8ba0-2f74bec59cb1"
       >
         연락처 저장
       </a>
@@ -139,26 +154,31 @@ function Contact(props) {
   );
 }
 function Donate() {
-  const handleCopyClipBoard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-
-      alert("계좌번호가 클립보드에 복사되었습니다.");
-    } catch (error) {
-      alert("복사 실패!");
-    }
-  };
   return (
     <div className="social donate" id="DonateID">
       <h2>Donate</h2>
       <hr style={{ width: "20vw" }} />
-      <div onClick={() => handleCopyClipBoard("대구은행 053-763-5577")}>
-        <button className="button-left">대구은행 053-763-5577</button>
-        <button className="button-right">copy</button>
+      <div>
+        <CopyToClipboard
+          text={"0537635577"}
+          onCopy={() => alert("계좌번호가 복사되었습니다.")}
+        >
+          <div>
+            <button className="button-left">대구은행 053-763-5577</button>
+            <FontAwesomeIcon icon={faCopy} className="button-right" />
+          </div>
+        </CopyToClipboard>
       </div>
-      <div onClick={() => handleCopyClipBoard("농 협 550-01-006126")}>
-        <button className="button-left">농 협 550-01-006126</button>
-        <button className="button-right">copy</button>
+      <div>
+        <CopyToClipboard
+          text={"55001006126"}
+          onCopy={() => alert("계좌번호가 복사되었습니다.")}
+        >
+          <div>
+            <button className="button-left">농 협 550-01-006126</button>
+            <FontAwesomeIcon icon={faCopy} className="button-right" />
+          </div>
+        </CopyToClipboard>
       </div>
 
       <h4>예금주 : 주호영후원회</h4>
@@ -166,9 +186,15 @@ function Donate() {
         ⦿ 후원금 입금 후 사무실로 전화주시거나 메일로 생년월일, 주소, 연락처를
         알려주시면 선거관리위원회 영수증을 보내드립니다.
       </p>
-      <p>후원회 사무실 : 053) 763-5577</p>
-      <p>서울 국회의원사무실 : 02) 784-2055 </p>
-      <p>Email : j7635577@naver.com</p>
+      <a href="tel:053-763-5577">
+        <p> 후원회 사무실 : 053) 763-5577</p>
+      </a>
+      <a href="tel:02-784-2055">
+        <p>서울 국회의원사무실 : 02) 784-2055 </p>
+      </a>
+      <a href="mailto:j7635577@naver.com">
+        <p>Email : j7635577@naver.com</p>
+      </a>
     </div>
   );
 }
